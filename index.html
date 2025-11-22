@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Avion — мебель, которая любит среду</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#2b6456;
+      --muted:#6b6b6b;
+      --bg:#faf9f7;
+      --card:#ffffff;
+      --radius:14px;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Inter", sans-serif;
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+    }
+    .container{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:28px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:28px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      background:#e7efe9;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Playfair Display";
+      color:var(--accent);
+      font-size:22px;
+    }
+    nav{
+      display:flex;
+      gap:16px;
+    }
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:32px;
+      align-items:center;
+      margin-bottom:36px;
+    }
+    .hero-left{
+      background:#fff;
+      padding:36px;
+      border-radius:18px;
+      box-shadow:0 6px 24px rgba(0,0,0,0.06);
+    }
+    .hero-left h1{
+      font-family:"Playfair Display";
+      font-size:42px;
+      margin:16px 0;
+    }
+    .hero-right img{
+      width:100%;
+      height:auto;
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:12px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin:32px 0;
+    }
+    .product{
+      background:#fff;
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    }
+    .product img{
+      width:100%;
+      height:auto;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+
+    .newsletter{
+      display:flex;
+      gap:20px;
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .about{
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:24px;
+    }
+    .about img{
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    footer{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid #ddd;
+      display:flex;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <div class="brand">
+    <div class="logo">Avion</div>
+    <h2 style="margin:0;font-family:'Playfair Display'">Avion</h2>
+  </div>
+
+  <nav>
+    <a href="#">New arrivals</a>
+    <a href="#">Best sellers</a>
+    <a href="#">Popular</a>
+    <a href="#">All products</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="kicker">Plant pots • Ceramics • Tables • Chairs • Crockery</div>
+    <h1>The furniture brand for the future</h1>
+    <p>Beautiful design, smooth shapes, comfort and natural aesthetics.</p>
+    <a class="btn" href="#">View collection</a>
+  </div>
+
+  <div class="hero-right">
+    <img src="assets/img/page1_img1.png" alt="Hero product">
+  </div>
+</section>
+
+<section>
+  <h2 style="font-family:'Playfair Display'">New ceramics</h2>
+
+  <div class="products-grid">
+    <div class="product">
+      <img src="assets/img/page1_img2.png" alt="">
+      <h3>The Dandy chair</h3>
+      <p>£250</p>
+    </div>
+
+    <div class="product">
+      <img src="assets/img/page1_img3.png" alt="">
+      <h3>Rustic Vase Set</h3>
+      <p>£155</p>
+    </div>
+
+    <div class="product">
+      <img src="assets/img/page1_img4.png" alt="">
+      <h3>The Silky Vase</h3>
+      <p>£125</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="font-family:'Playfair Display'">Popular products</h2>
+
+  <div class="products-grid">
+    <div class="product">
+      <img src="assets/img/page1_img5.png" alt="">
+      <h3>The Lucy Lamp</h3>
+      <p>£399</p>
+    </div>
+
+    <div class="product">
+      <img src="assets/img/page1_img6.png" alt="">
+      <h3>The Dandy chair</h3>
+      <p>£250</p>
+    </div>
+
+    <div class="product">
+      <img src="assets/img/page1_img7.png" alt="">
+      <h3>The Poplar suede sofa</h3>
+      <p>£980</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div>
+    <h3 style="font-family:'Playfair Display'">Join the club and get the benefits</h3>
+    <p>Exclusive offers, early access and more.</p>
+  </div>
+
+  <form style="display:flex;gap:10px;">
+    <input type="email" placeholder="E-mail">
+    <button class="btn">Sign up</button>
+  </form>
+</section>
+
+<section class="about">
+  <div>
+    <h2 style="font-family:'Playfair Display'">From a London studio to 400 global stores</h2>
+    <p>High quality furniture available to everyone. Handcrafted, elegant and timeless.</p>
+  </div>
+
+  <img src="assets/img/page1_img9.png" alt="">
+</section>
+
+</main>
+
+<footer>
+  <div>Avion © 2022</div>
+  <div>About us • Privacy • Contact</div>
+</footer>
+
+</div>
+
+</body>
+</html>
