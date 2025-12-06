@@ -24,180 +24,61 @@
       color:#111;
       line-height:1.45;
     }
-    .container{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:28px;
-    }
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:28px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-    .logo{
-      width:72px;
-      height:72px;
-      background:#e7efe9;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-family:"Playfair Display";
-      color:var(--accent);
-      font-size:22px;
-    }
-    nav{
-      display:flex;
-      gap:16px;
-    }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-    }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:32px;
-      align-items:center;
-      margin-bottom:36px;
-    }
-    .hero-left{
-      background:#fff;
-      padding:36px;
-      border-radius:18px;
-      box-shadow:0 6px 24px rgba(0,0,0,0.06);
-    }
-    .hero-left h1{
-      font-family:"Playfair Display";
-      font-size:42px;
-      margin:16px 0;
-    }
-    .hero-right img{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.04);
-    }
-
-    .btn{
-      background:var(--accent);
-      color:white;
-      padding:12px 18px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-    }
-
-    .products-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-      margin:32px 0;
-    }
-    .product{
-      background:#fff;
-      border-radius:12px;
-      padding:16px;
-      text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,0.04);
-    }
-    .product img{
-      width:100%;
-      height:auto;
-      border-radius:10px;
-      margin-bottom:12px;
-    }
-
-    .newsletter{
-      display:flex;
-      gap:20px;
-      background:#fff;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.04);
-    }
-
-    .about{
-      margin-top:40px;
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:24px;
-    }
-    .about img{
-      width:100%;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.04);
-    }
-
-    footer{
-      margin-top:40px;
-      padding-top:20px;
-      border-top:1px solid #ddd;
-      display:flex;
-      justify-content:space-between;
-    }
   </style>
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
 <div class="container">
 
-<header>
-  <div class="brand">
-    <div class="logo">Avion</div>
-    <h2 style="margin:0;font-family:'Playfair Display'">Made By KFG</h2>
+<header class="flex justify-between items-center mb-20">
+  <div class="brand flex items-center gap-10">
+    <div class="logo text-center text-lg rounded shadow">Avion</div>
+    <h2 class="text-lg">Made By KFG</h2>
   </div>
 
-  <nav>
-    <a href="#">New arrivals</a>
-    <a href="#">Best sellers</a>
-    <a href="#">Popular</a>
-    <a href="#">All products</a>
+  <nav class="flex gap-10">
+    <a href="#" class="text-muted">New arrivals</a>
+    <a href="#" class="text-muted">Best sellers</a>
+    <a href="#" class="text-muted">Popular</a>
+    <a href="#" class="text-muted">All products</a>
   </nav>
 </header>
 
 <main>
 
-<section class="hero">
-  <div class="hero-left">
-    <div class="kicker">Plant pots • Ceramics • Tables • Chairs • Crockery</div>
-    <h1>The furniture brand for the future(maybe, im not shure)</h1>
+<section class="hero flex items-center gap-20">
+  <div class="hero-left p-10 rounded shadow">
+    <div class="kicker text-muted">Plant pots • Ceramics • Tables • Chairs • Crockery</div>
+    <h1 class="text-lg">The furniture brand for the future(maybe, im not shure)</h1>
     <p>Beautiful design, smooth shapes, comfort and natural aesthetics. Also im sorry, but i cant be arsed to match the images to the titles</p>
     <a class="btn" href="#">View collection</a>
   </div>
 
   <div class="hero-right">
-    <img src="Img/Image.png" alt="Hero product">
+    <img src="Img/Image.png" alt="Hero product" class="rounded shadow">
   </div>
 </section>
 
 <section>
-  <h2 style="font-family:'Playfair Display'">New ceramics</h2>
+  <h2 class="text-lg">New ceramics</h2>
 
   <div class="products-grid">
-    <div class="product">
-      <img src="Img/Photo1.png" alt="">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/Photo1.png" alt="" class="rounded mb-20">
       <h3>Cool looking sofa idk</h3>
       <p>£2413</p>
     </div>
 
-    <div class="product">
-      <img src="Img/Photo2.png" alt="">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/Photo2.png" alt="" class="rounded mb-20">
       <h3>Rustic Vase Set(if it was floating)</h3>
       <p>£155</p>
     </div>
 
-    <div class="product">
-      <img src="Img/Photo3.png" alt="">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/Photo3.png" alt="" class="rounded mb-20">
       <h3>sad chair</h3>
       <p>£1255</p>
     </div>
@@ -205,53 +86,53 @@
 </section>
 
 <section>
-  <h2 style="font-family:'Playfair Display'">Popular products</h2>
+  <h2 class="text-lg">Popular products</h2>
 
   <div class="products-grid">
-    <div class="product">
-      <img src="Img/Photo.png" alt="">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/Photo.png" alt="" class="rounded mb-20">
       <h3>THE dangly thing(actually a chair)</h3>
       <p>£9</p>
     </div>
 
-    <div class="product">
-      <img src="Img/Large.png" alt="">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/Large.png" alt="" class="rounded mb-20">
       <h3>some vase from the attic</h3>
       <p>£30</p>
     </div>
 
-    <div class="product">
-      <img src="Img/SofaMB.png" alt="yeah you fucked up, no image here">
+    <div class="product p-10 rounded shadow text-center">
+      <img src="Img/SofaMB.png" alt="" class="rounded mb-20">
       <h3>The Popular suede sofa</h3>
       <p>£980</p>
     </div>
   </div>
 </section>
 
-<section class="newsletter">
+<section class="newsletter flex gap-20 p-10 rounded shadow">
   <div>
-    <h3 style="font-family:'Playfair Display'">Join the club and get the benefits</h3>
+    <h3 class="text-lg">Join the club and get the benefits</h3>
     <p>Exclusive offers, early access and more.</p>
   </div>
 
-  <form style="display:flex;gap:10px;">
-    <input type="email" placeholder="E-mail">
+  <form class="flex gap-10">
+    <input type="email" placeholder="E-mail" class="p-10 rounded">
     <button class="btn">Sign up</button>
   </form>
 </section>
 
-<section class="about">
+<section class="about flex gap-20 mt-20">
   <div>
-    <h2 style="font-family:'Playfair Display'">From a London studio to 400 global stores</h2>
+    <h2 class="text-lg">From a London studio to 400 global stores</h2>
     <p>High quality furniture available to everyone. Handcrafted, elegant and timeless.</p>
   </div>
 
-  <img src="Img/page1_img9.png" alt="">
+  <img src="Img/page1_img9.png" alt="" class="rounded shadow">
 </section>
 
 </main>
 
-<footer>
+<footer class="flex justify-between mt-20 p-10 border-top">
   <div>Avion © 2022</div>
   <div>There is nothing about us • We dont care about Privacy • Never contact us</div>
 </footer>

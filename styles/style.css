@@ -1,0 +1,52 @@
+/*Atomic CSS*/
+
+/*Typography*/
+.text-center {
+  text-align: center;
+}
+.text-lg {
+  font-size: 1.25rem;
+}
+.text-muted {
+  color: var(--muted);
+}
+
+/* Spacing */
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.p-10 {
+  padding: 10px;
+}
+
+/*Flexbox*/
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+
+/*Buttons*/
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*Utility classes*/
+.rounded {
+  border-radius: var(--radius);
+}
+.shadow {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
