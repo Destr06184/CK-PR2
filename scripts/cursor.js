@@ -1,11 +1,11 @@
-// Кастомный курсор: бумажный самолётик с шлейфом
+// МОЙ ЛИЧНЫЙ КУРСОР
 (function () {
   const isFinePointer = window.matchMedia('(pointer: fine)').matches;
   if (!isFinePointer) return;
 
-  const plane = document.createElement('div');
-  plane.id = 'cursor-plane';
-  document.body.appendChild(plane);
+  const circle = document.createElement('div');
+  circle.id = 'cursor-circle';
+  document.body.appendChild(circle);
 
   document.body.classList.add('has-custom-cursor');
 
@@ -13,37 +13,15 @@
   let targetY = window.innerHeight / 2;
   let currentX = targetX;
   let currentY = targetY;
-  let lastX = targetX;
-  let lastY = targetY;
   let rafId;
 
   const lerp = (a, b, t) => a + (b - a) * t;
-
-  function spawnTrail(x, y) {
-    const dot = document.createElement('div');
-    dot.className = 'cursor-trail';
-    dot.style.transform = `translate(${x}px, ${y}px)`;
-    document.body.appendChild(dot);
-    setTimeout(() => dot.remove(), 500);
-  }
 
   function update() {
     currentX = lerp(currentX, targetX, 0.2);
     currentY = lerp(currentY, targetY, 0.2);
 
-    const dx = currentX - lastX;
-    const dy = currentY - lastY;
-    const angle = Math.atan2(dy, dx) * 180 / Math.PI + 90; // нос вперёд по движению
-
-    plane.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${angle}deg)`;
-
-    // шлейф — создаём точку, если движение заметное
-    const dist2 = dx*dx + dy*dy;
-    if (dist2 > 16) {
-      spawnTrail(currentX, currentY);
-      lastX = currentX;
-      lastY = currentY;
-    }
+    circle.style.transform = `translate(${currentX}px, ${currentY}px)`;
 
     rafId = requestAnimationFrame(update);
   }
@@ -51,11 +29,11 @@
   function onMove(e) {
     targetX = e.clientX;
     targetY = e.clientY;
-    plane.parentElement?.classList.add('cursor-visible');
+    circle.parentElement?.classList.add('cursor-visible');
   }
 
   function onLeave() {
-    plane.parentElement?.classList.remove('cursor-visible');
+    circle.parentElement?.classList.remove('cursor-visible');
   }
 
   window.addEventListener('pointermove', onMove, { passive: true });
@@ -63,6 +41,6 @@
 
   rafId = requestAnimationFrame(update);
 
-  // Очистка при выгрузке
+  // очистка при выгрузке
   window.addEventListener('beforeunload', () => cancelAnimationFrame(rafId));
 })();
