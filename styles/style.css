@@ -1,3 +1,32 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+*::before, *::after {
+  box-sizing: inherit;
+}
+
 /*Atomic CSS*/
 
 /*Typography*/
@@ -43,10 +72,34 @@
   font-weight: 700;
 }
 
+.btn:hover {
+  background-color: #1e3a22;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /*Utility classes*/
 .rounded {
   border-radius: var(--radius);
 }
 .shadow {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Interactive states */
+.text-muted:hover {
+  color: var(--accent);
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
