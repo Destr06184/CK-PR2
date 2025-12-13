@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Avion — мебель, которая любит среду</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -19,7 +19,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:"Inter", sans-serif;
+      font-family:"Roboto", sans-serif;
       background:var(--bg);
       color:#111;
       line-height:1.45;
@@ -27,33 +27,46 @@
   </style>
 
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 <body>
 
 <div class="container">
 
-<header class="flex justify-between items-center mb-20">
-  <div class="brand flex items-center gap-10">
-    <div class="logo text-center text-lg rounded shadow">Avion</div>
-    <h2 class="text-lg">Made By KFG</h2>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <img src="Лого.png" alt="Логотип" width="120" height="40">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link active">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">О проекте</a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a href="#portfolio" class="nav__link">Портфолио</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn btn--primary header__cta">Заказать</button>
+    </div>
   </div>
-
-  <nav class="flex gap-10">
-    <a href="#" class="text-muted">New arrivals</a>
-    <a href="#" class="text-muted">Best sellers</a>
-    <a href="#" class="text-muted">Popular</a>
-    <a href="#" class="text-muted">All products</a>
-  </nav>
 </header>
-
-<nav class="navigation flex gap-10 mb-20">
-  <ul class="list-none flex gap-10">
-    <li><a href="#about" class="text-muted hover:text-primary">О нас</a></li>
-    <li><a href="#services" class="text-muted hover:text-primary">Услуги</a></li>
-    <li><a href="#portfolio" class="text-muted hover:text-primary">Портфолио</a></li>
-    <li><a href="#contact" class="text-muted hover:text-primary">Контакты</a></li>
-  </ul>
-</nav>
 
 <main>
 
@@ -212,6 +225,12 @@
 
 </div>
 
+<!-- Кнопка "Наверх" -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  ↑
+</button>
+
+<script src="scripts/menu.js"></script>
 <script src="scripts/cursor.js" defer></script>
 
 </body>
