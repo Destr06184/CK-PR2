@@ -6,7 +6,7 @@
   .header__cta { display: none; /* Скрываем CTA на планшетах */ }
 }
 
-/* Планшет и мобильные (768px и меньше) */
+/* Планшет и мобильные - 768px и меньше */
 @media (max-width: 768px) {
   .menu-toggle { display: flex; /* Показываем гамбургер */ }
 
@@ -31,7 +31,11 @@
 
   .nav__item { width: 100%; }
 
-  .nav__link { display: block; width: 100%; padding: 15px 0; font-size: 18px; /* Увеличиваем для мобильных */ border-bottom: 1px solid #eee; }
+  .nav__link { display: block; 
+    width: 100%; 
+    padding: 15px 0; 
+    font-size: 18px; /* Увеличиваем для мобильных */ 
+    border-bottom: 1px solid #eee; }
 
   .nav__link:hover, .nav__link.active {
     background: transparent;
@@ -64,5 +68,5 @@
 @media (max-width: 480px) {
   .nav { width: 100%; }
   .logo img { width: 100px; height: auto; }
-  body { font-size: 17px; /* iOS рекомендация */ }
+  body { font-size: 17px; /* рекомендация из купертино */ }
 }
